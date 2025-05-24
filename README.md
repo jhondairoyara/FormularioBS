@@ -138,10 +138,17 @@ La estructura del proyecto sigue las convenciones de Maven para un proyecto Spri
 Este es un desglose de los archivos y directorios clave en el repositorio:
 
 * **`FormularioBS/`** (Directorio raíz del proyecto)
+    * `.gitattributes` 📝 (Configuración de atributos de Git, como finales de línea)
+    * `.gitignore` 🚫 (Define qué archivos y carpetas debe ignorar Git)
     * `.mvn/` 🛠️
         * `wrapper/`
             * `maven-wrapper.jar` (Permite la ejecución de Maven sin instalación global)
             * `maven-wrapper.properties`
+    * `mvnw` 📜 (Script de ejecución del Maven Wrapper para sistemas Unix/macOS)
+    * `mvnw.cmd` 📜 (Script de ejecución del Maven Wrapper para sistemas Windows)
+    * `mydb.sql` 🗄️ (Script SQL para la creación de la base de datos)
+    * `pom.xml` 📦 (Archivo de configuración principal de Maven)
+    * `README.md` 📖 (Este documento)
     * `src/` 💻 (Contiene todo el código fuente y recursos)
         * `main/`
             * `java/` ☕ (Clases Java de la aplicación)
@@ -176,7 +183,3 @@ Este es un desglose de los archivos y directorios clave en el repositorio:
             * `java/`
                 * `FormularioBS/`
                     * `FormularioBsApplicationTests.java`
-    * `.gitignore` 🚫 (Define qué archivos y carpetas debe ignorar Git)
-    * `pom.xml` 📦 (Archivo de configuración principal de Maven)
-    * `mydb.sql` 🗄️ (Script SQL para la creación de la base de datos)
-    * `README.md` 📖 (Este documento)
