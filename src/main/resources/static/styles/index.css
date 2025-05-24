@@ -1,0 +1,122 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    font-family: 'Poppins-Medium';
+}
+
+:root {
+    --color-primary: #ffde59;
+    --color-secondary: #13161c;
+    --color-tertiary: #1b2027;
+    --color-quaternary: #ed4242;
+    --color-white: #ffffff;
+    --color-gray: #2b2f36;
+    --color-gray-medium: #888;
+    --color-gray-dark: #444;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.5rem; /* levemente reducido */
+}
+
+.container {
+    background-color: var(--color-tertiary);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    width: 35rem;
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+    font-size: 2.6rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: calc(100% - 1rem);
+    padding: 0.8rem;
+    border: 1px solid var(--color-gray-dark);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="date"]::placeholder {
+    color: var(--color-gray-medium);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0.5rem rgba(255, 222, 89, 0.5);
+}
+
+input[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
