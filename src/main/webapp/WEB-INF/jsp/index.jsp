@@ -48,12 +48,10 @@
         <div class="form-group">
             <label for="id_ciudad">ID Ciudad:</label>
             <input type="number" id="id_ciudad" name="idCiudad" placeholder="21 - 52" required>
-            <%-- CAMBIO AQUÍ: de name="id_ciudad" a name="idCiudad" --%>
         </div>
         <div class="form-group">
             <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
             <input type="date" id="fecha_nacimiento" name="fechaNacimiento" placeholder="AAAA-MM-DD" required>
-            <%-- CAMBIO AQUÍ: de name="fecha_nacimiento" a name="fechaNacimiento" --%>
         </div>
         <input type="submit" value="Crear Usuario">
     </form>

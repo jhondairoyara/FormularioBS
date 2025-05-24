@@ -5,14 +5,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn; // Necesaria para @JoinColumn
-import jakarta.persistence.ManyToOne;  // Necesaria para @ManyToOne
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import java.io.Serializable;
 import java.util.Date;
-import org.springframework.format.annotation.DateTimeFormat; // <-- ¡NUEVA IMPORTACIÓN REQUERIDA!
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "usuario")
@@ -20,7 +20,7 @@ public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id_Usuario") // Mapea a la columna 'Id_Usuario' en la DB
+    @Column(name = "Id_Usuario")
     private Long id;
 
     @Column(name = "Nombres", nullable = false, length = 50)
@@ -35,35 +35,17 @@ public class Usuario implements Serializable {
     @Column(name = "Direccion", nullable = false, length = 150)
     private String direccion;
 
-    // --- ¡AQUÍ SOLO QUEDA LA RELACIÓN CON CIUDAD! ---
-    @ManyToOne // Un Usuario pertenece a una Ciudad
-    @JoinColumn(name = "Id_Ciudad", nullable = false) // Nombre de la columna de la FK en la tabla 'usuario' en la BD
-    private Ciudad ciudad; // Ahora es un objeto Ciudad
-
-    // ¡CAMBIO CLAVE: NO HAY CAMPO 'DEPARTAMENTO' AQUÍ!
+    @ManyToOne
+    @JoinColumn(name = "Id_Ciudad", nullable = false)
+    private Ciudad ciudad;
 
     @Column(name = "Fecha_Nacimiento", nullable = false)
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "yyyy-MM-dd") // <-- ¡ESTA ES LA LÍNEA QUE FALTABA!
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechaNacimiento;
 
-    // Constructor sin argumentos (¡Necesario para JPA!)
     public Usuario() {
     }
-
-    // Constructor con todos los argumentos (¡ACTUALIZA ESTE SI LO USAS!)
-    // Deberías cambiar 'Integer idCiudad' por 'Ciudad ciudad' y eliminar 'Departamento departamento'
-    // public Usuario(Long id, String nombres, String apellidos, String telefono, String direccion, Ciudad ciudad, Date fechaNacimiento) {
-    //     this.id = id;
-    //     this.nombres = nombres;
-    //     this.apellidos = apellidos;
-    //     this.telefono = telefono;
-    //     this.direccion = direccion;
-    //     this.ciudad = ciudad;
-    //     this.fechaNacimiento = fechaNacimiento;
-    // }
-
-    // --- Métodos Getters y Setters ---
 
     public Long getId() {
         return id;
@@ -105,7 +87,6 @@ public class Usuario implements Serializable {
         this.direccion = direccion;
     }
 
-    // --- GETTERS Y SETTERS PARA CIUDAD ---
     public Ciudad getCiudad() {
         return ciudad;
     }
@@ -121,6 +102,4 @@ public class Usuario implements Serializable {
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
-
-    // Opcional: Puedes añadir un método toString(), equals() y hashCode() aquí si lo necesitas.
 }

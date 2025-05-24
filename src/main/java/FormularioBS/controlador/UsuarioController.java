@@ -1,9 +1,8 @@
 package FormularioBS.controlador;
 
 import FormularioBS.modelo.Usuario;
-import FormularioBS.modelo.Ciudad;     // ¡Necesitas esta importación!
+import FormularioBS.modelo.Ciudad;
 import FormularioBS.dao.UsuarioRepository;
-// import FormularioBS.dao.CiudadRepository; // Puedes mantenerlo si lo usas para cargar la ciudad completa
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam; // ¡Necesitas esta importación para recibir el ID de Ciudad!
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UsuarioController {
@@ -27,8 +26,8 @@ public class UsuarioController {
 
     @PostMapping("/crearUsuario")
     public String crearUsuario(@ModelAttribute("usuario") Usuario usuario,
-                               @RequestParam("idCiudad") Integer idCiudad,      // <--- Solo recibimos el ID numérico de Ciudad
-                               Model model) { // ¡CAMBIO CLAVE: Eliminado @RequestParam para idDepartamento!
+                               @RequestParam("idCiudad") Integer idCiudad,      
+                               Model model) {
         try {
             // Spring ya llenó los campos básicos del 'usuario' (nombres, apellidos, etc.)
             // Ahora, MANEJAMOS LA RELACIÓN CON CIUDAD:

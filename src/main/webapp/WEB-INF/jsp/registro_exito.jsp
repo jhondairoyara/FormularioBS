@@ -16,10 +16,10 @@
     </style>
 </head>
 <body>
-    <div class="container success-container"> <%-- Se añadió la clase 'success-container' --%>
+    <div class="container success-container">
         <h2>¡Registro exitoso!</h2>
         <p>El nuevo usuario ha sido creado correctamente en la base de datos.</p>
-        <a href="<%= request.getContextPath() %>/">Volver al formulario</a> <%-- ¡Aquí el pequeño cambio! --%>
+        <a href="<%= request.getContextPath() %>/">Volver al formulario</a>
     </div>
 </body>
 </html>

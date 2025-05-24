@@ -21,7 +21,6 @@
         <h2>¡Error en el registro!</h2>
         <p>Hubo un problema al intentar registrar el usuario. Por favor, inténtalo de nuevo.</p>
 
-        <%-- ¡Aquí es donde cambia! Usamos JSTL para mostrar el mensajeError --%>
         <c:if test="${not empty mensajeError}">
             <p><strong>Detalle del error:</strong> <c:out value="${mensajeError}"/></p>
         </c:if>

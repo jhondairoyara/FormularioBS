@@ -1,6 +1,6 @@
 package FormularioBS.modelo;
 
-import jakarta.persistence.Column; // Asegúrate de importar Column
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +15,7 @@ public class Ciudad {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idCiudad;
 
-    @Column(name = "Nom_Ciudad") // ¡CAMBIO AQUÍ! Nombre de la columna en tu BD
+    @Column(name = "Nom_Ciudad")
     private String nombreCiudad;
 
     public Ciudad() {
