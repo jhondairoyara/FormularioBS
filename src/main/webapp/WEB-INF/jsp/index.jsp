@@ -31,15 +31,15 @@
     <form action="<%= request.getContextPath() %>/crearUsuario" method="post">
         <div class="form-group">
             <label for="nombres">Nombres:</label>
-            <input type="text" id="nombres" name="nombres" placeholder="Noah" required>
+            <input type="text" id="nombres" name="nombres" placeholder="Noah" required pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+">
         </div>
         <div class="form-group">
             <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" placeholder="Johnson" required>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Johnson" required pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+">
         </div>
         <div class="form-group">
             <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" placeholder="3101234567">
+            <input type="text" id="telefono" name="telefono" placeholder="3101234567" pattern="\d{10}">
         </div>
         <div class="form-group">
             <label for="direccion">Dirección:</label>
@@ -47,7 +47,7 @@
         </div>
         <div class="form-group">
             <label for="id_ciudad">ID Ciudad:</label>
-            <input type="number" id="id_ciudad" name="idCiudad" placeholder="21 - 52" required>
+            <input type="number" id="id_ciudad" name="idCiudad" placeholder="21 - 52" required min="21">
         </div>
         <div class="form-group">
             <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
