@@ -1,11 +1,11 @@
 # FormularioBS: Sistema de Registro de Usuarios para Blessing Store
 
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-2.7.x-green?style=for-the-badge&logo=spring)
-![Spring MVC](https://img.shields.io/badge/Spring_MVC-5.3.x-blue?style=for-the-badge&logo=spring)
-![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-5.3.x-informational?style=for-the-badge&logo=spring)
+![Spring MVC](https://img.shields.io/badge/Spring_MVC-5.3-blue?style=for-the-badge&logo=spring)
+![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-5.3-informational?style=for-the-badge&logo=spring)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?style=for-the-badge&logo=mysql)
 ![Maven](https://img.shields.io/badge/Maven-3.8.x-red?style=for-the-badge&logo=apachemaven)
-![Apache Tomcat](https://img.shields.io/badge/Apache_Tomcat-10.x-blueviolet?style=for-the-badge&logo=apachetomcat)
+![Apache Tomcat](https://img.shields.io/badge/Apache_Tomcat-10-blueviolet?style=for-the-badge&logo=apachetomcat)
 ![Java](https://img.shields.io/badge/Java-11+-orange?style=for-the-badge&logo=openjdk)
 
 ## 📝 Descripción del Proyecto
